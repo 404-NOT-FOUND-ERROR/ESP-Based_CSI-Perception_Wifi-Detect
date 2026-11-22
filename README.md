@@ -15,6 +15,7 @@ An experimental ESP32-S31 project for fixed-dock Wi-Fi CSI activity sensing and 
 - [Power plan](docs/POWER_PLAN.md): bounded CSI windows and whole-device measurement.
 - [Reproduce desktop checks](docs/TESTING.md).
 - [Dated validation record](docs/VALIDATION.md).
+- [First real N1 export review](docs/FIELD_NOTES/2026-11-22-n1-run6.md).
 - [Open the simulated report](examples/report/report.html).
 - [Interactive stage map](docs/index.html): browse each phase, input requirement, and completion signal.
 
@@ -22,7 +23,7 @@ An experimental ESP32-S31 project for fixed-dock Wi-Fi CSI activity sensing and 
 
 | Area | Included | Evidence boundary |
 | --- | --- | --- |
-| N1 hotspot | Bounded recorder and relative RSSI trend | C tests; real phone movement and RF performance remain to be measured |
+| N1 hotspot | Bounded recorder and relative RSSI trend | First real export passed integrity checks; it has no movement labels, so walk-away performance remains unmeasured |
 | R1 CSI | S31 LLTF8 configuration adapter, bounded callback queue, JSONL encoder and quality analyzer | Host tests and fixed-SDK translation-unit checks in the source package; real payload layout and packet rate remain to be measured |
 | Offline review | HTML report for N1 JSON and R1 CSI JSONL | Browser-tested with simulated data |
 | Power-aware sensing | Design for CSI-off-by-default and bounded observation windows | Design only; no power-saving percentage is claimed |
@@ -66,6 +67,7 @@ Repository documentation and project glue use the repository [MIT License](LICEN
 - [功耗方案](docs/POWER_PLAN.md)：CSI 限时观察和整机功耗测量。
 - [电脑端复现检查](docs/TESTING.md)。
 - [本轮验证记录](docs/VALIDATION.md)。
+- [第一份真机 N1 导出分析](docs/FIELD_NOTES/2026-11-22-n1-run6.md)。
 - [打开模拟数据报告](examples/report/report.html)。
 
 ![N1 and R1 simulated replay report](docs/assets/report-desktop.png)
@@ -76,7 +78,7 @@ Repository documentation and project glue use the repository [MIT License](LICEN
 
 | 模块 | 仓库内容 | 证据边界 |
 | --- | --- | --- |
-| N1 热点 | 有界记录器和相对 RSSI 趋势 | C 测试已覆盖；真实手机移动与无线效果待测 |
+| N1 热点 | 有界记录器和相对 RSSI 趋势 | 首份真机导出完整性通过；没有动作标签，走远/走近效果待测 |
 | R1 CSI | S31 LLTF8 配置适配、有界回调队列、JSONL 编码和质量分析 | 源码包包含电脑检查与固定 SDK 编译单元检查；真实载荷格式和包率待测 |
 | 离线报告 | 读取 N1 JSON 与 R1 CSI JSONL 的交互报告 | 已用模拟数据通过浏览器检查 |
 | 功耗感知 | CSI 默认关闭与限时观察设计 | 目前是设计，尚无省电百分比结论 |
@@ -85,7 +87,7 @@ Repository documentation and project glue use the repository [MIT License](LICEN
 
 ### 开发顺序
 
-电脑端模拟与分析工具已完成。下一步先确认当前应用版本的集成和导出契约，再分别采集 N1 热点与 R1 CSI 的真实数据。数据质量通过后，比较活动检测方法；之后才实现限时 CSI 观察、测量整机功耗与共存，最后接入停靠陪伴体验。
+电脑端工具和 N1 导出完整性检查已完成。首份真机 N1 记录没有动作标签；下一步按路线采集带标签的热点移动数据，并继续补齐 CSI 的运行采样与导出契约。真实数据质量通过后再比较算法、实现限时 CSI、测整机功耗与共存，最后接入停靠陪伴体验。
 
 完整阶段、时间估计和验收门槛见[开发管线](docs/DEVELOPMENT_PLAN.zh-CN.md)。时间是工程投入估算，不是日历承诺；进度取决于单台设备的测试窗口和真实数据质量。
 

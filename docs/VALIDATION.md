@@ -13,19 +13,25 @@ Updated: 2026-11-22
 - Browser check: 8 groups passed at desktop and 390 px widths; no JavaScript
   errors or external requests.
 
-All capture files in this repository are synthetic and marked
-`simulated=true`. These checks validate code, file handling and presentation.
-They do not measure a real hotspot, CSI radio payload, activity detector,
-device power, or integrated Mosaico behavior.
+## First real N1 export
+
+The [first device export review](FIELD_NOTES/2026-11-22-n1-run6.md) confirms 170
+valid observations over 88.207 seconds, no missed or overwritten reads, and
+zero historical replay mismatches. All observations are unmarked, so movement
+classification is pending. The raw capture stays local; the public field note
+contains aggregate results and its SHA-256.
+
+Repository fixtures remain synthetic and marked `simulated=true`. Real CSI,
+labeled movement detection, integrated coexistence and power measurements
+have their own acceptance gates.
 
 ## Next evidence gate
 
-Stage 1 in the [development plan](DEVELOPMENT_PLAN.zh-CN.md) is the next step:
-the integrating application owner selects a fixed firmware source snapshot,
-agrees on the export schema and authentication boundary, and provides a short
-device window. Record the firmware commit, SDK, board identity, power source,
-run ID, packet counters and original-file hashes before starting N1 or CSI
-field collection.
+The next N1 step is [labeled movement collection](N1_NEXT_CAPTURE.zh-CN.md).
+For CSI, stage 1 in the [development plan](DEVELOPMENT_PLAN.zh-CN.md) still
+requires a fixed runtime/export contract from the integrating application.
+Record firmware/SDK, power source, run ID, packet counters and original-file
+hashes for every device window.
 
 Desktop verification is separate from target compilation, installation,
 runtime identity, RF measurement and human acceptance. The [power plan](POWER_PLAN.md)
