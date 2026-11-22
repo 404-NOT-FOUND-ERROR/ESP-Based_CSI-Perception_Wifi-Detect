@@ -1,0 +1,220 @@
+{
+  "schema": "radio-lab.source-manifest.v1",
+  "date": "2026-11-22",
+  "origin": "ESP AirBoat experimental radio worktree",
+  "source_commit": "d99be2383cd7d3c1d67955c944b59121154585a3",
+  "sdk_target": "esp32s31",
+  "sdk_commit": "7b9cc1ac79f865983f59bb8ff3ff43eb74ff1dbe",
+  "imported_files": [
+    {
+      "source_path": "components/app_csi_probe/CMakeLists.txt",
+      "destination_path": "components/app_csi_probe/CMakeLists.txt",
+      "source_sha256": "85d1c0664d116ce23b3abf5a72e4a081337b2f9bb74bf5537efc6f126ced09b2",
+      "packaged_sha256": "85d1c0664d116ce23b3abf5a72e4a081337b2f9bb74bf5537efc6f126ced09b2",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/POWER_POLICY.md",
+      "destination_path": "components/app_csi_probe/POWER_POLICY.md",
+      "source_sha256": "dc9dea4578f4df97819e0559229961d69c2bd546e1a888e178662b632f5c014e",
+      "packaged_sha256": "dc9dea4578f4df97819e0559229961d69c2bd546e1a888e178662b632f5c014e",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/README.md",
+      "destination_path": "components/app_csi_probe/README.md",
+      "source_sha256": "eaa41cb76795125ed662d19ddb94ad1814a84ddab3888d90a3fd92422365f73c",
+      "packaged_sha256": "a31a0373ac6d01512e59392962efd5aeedcdbee483404637c63d949b8b78b645",
+      "modified_for_packaging": true
+    },
+    {
+      "source_path": "components/app_csi_probe/app_csi_probe.c",
+      "destination_path": "components/app_csi_probe/app_csi_probe.c",
+      "source_sha256": "17778804983745743fd38b701933abe894911b436741180f1987834bc85fc5ac",
+      "packaged_sha256": "17778804983745743fd38b701933abe894911b436741180f1987834bc85fc5ac",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/csi_json.c",
+      "destination_path": "components/app_csi_probe/csi_json.c",
+      "source_sha256": "c9ca507ba0ac5991a483425943db78f54e13d7f2dd525ec6c8e26e0b0c883601",
+      "packaged_sha256": "c9ca507ba0ac5991a483425943db78f54e13d7f2dd525ec6c8e26e0b0c883601",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/csi_s31.c",
+      "destination_path": "components/app_csi_probe/csi_s31.c",
+      "source_sha256": "8e61767d3769d3df6f309698f54d83ccc4a674110c060252029a239746406f25",
+      "packaged_sha256": "8e61767d3769d3df6f309698f54d83ccc4a674110c060252029a239746406f25",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/host/analyze_capture.py",
+      "destination_path": "components/app_csi_probe/host/analyze_capture.py",
+      "source_sha256": "2ac34998bd3cafb32079e637b510285a6c3620ac38a318b85e0991a90cf726bd",
+      "packaged_sha256": "2ac34998bd3cafb32079e637b510285a6c3620ac38a318b85e0991a90cf726bd",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/host/compat/esp_wifi.h",
+      "destination_path": "components/app_csi_probe/host/compat/esp_wifi.h",
+      "source_sha256": "ec12b77cf10566ecd961fdc629e2ce6871c007090e6bf9ee2b55c65b23c7b0ec",
+      "packaged_sha256": "ec12b77cf10566ecd961fdc629e2ce6871c007090e6bf9ee2b55c65b23c7b0ec",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/host/test_analyzer.py",
+      "destination_path": "components/app_csi_probe/host/test_analyzer.py",
+      "source_sha256": "9f08a30cf79d87fcbc6372187964d226f875aa22315e1b5af1723829dda28ad5",
+      "packaged_sha256": "9f08a30cf79d87fcbc6372187964d226f875aa22315e1b5af1723829dda28ad5",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/host/test_csi.c",
+      "destination_path": "components/app_csi_probe/host/test_csi.c",
+      "source_sha256": "59f7baba7816135a42640630ddd61ec5b29c509ddc04db78c26aed7776ed8b84",
+      "packaged_sha256": "59f7baba7816135a42640630ddd61ec5b29c509ddc04db78c26aed7776ed8b84",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/host/test_threads.c",
+      "destination_path": "components/app_csi_probe/host/test_threads.c",
+      "source_sha256": "dc5efa219d283b951e5000a5b30c176d827f30118b05831728d4cdf0a7c661ec",
+      "packaged_sha256": "dc5efa219d283b951e5000a5b30c176d827f30118b05831728d4cdf0a7c661ec",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/include/app_csi_probe.h",
+      "destination_path": "components/app_csi_probe/include/app_csi_probe.h",
+      "source_sha256": "021d8328ea5d474410409a5e426d062fe0a76ac7c68be0a31e0255992b5f952c",
+      "packaged_sha256": "021d8328ea5d474410409a5e426d062fe0a76ac7c68be0a31e0255992b5f952c",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_csi_probe/include/app_csi_s31.h",
+      "destination_path": "components/app_csi_probe/include/app_csi_s31.h",
+      "source_sha256": "c4b0c483af18fa577e05bca2c7081ee335ba521172c068a52e13cd497d6fd31d",
+      "packaged_sha256": "c4b0c483af18fa577e05bca2c7081ee335ba521172c068a52e13cd497d6fd31d",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_radio_probe/CMakeLists.txt",
+      "destination_path": "components/app_radio_probe/CMakeLists.txt",
+      "source_sha256": "bd93fd6e7a6a8a1bf42a0f41e7112b9331322d32e742cee19bc7843ae52d0a99",
+      "packaged_sha256": "657974fd376f11a38bf7461e4c4adce84979a9b3e0399761ef868d43c14ac57e",
+      "modified_for_packaging": true
+    },
+    {
+      "source_path": "components/app_radio_probe/README.md",
+      "destination_path": "components/app_radio_probe/README.md",
+      "source_sha256": "853ff12f329436962315cf4d4ce568f7614c195de809f0818ec2468542b2a328",
+      "packaged_sha256": "7a29311ed3a2c8b110dc6600501f556bf4307a838b2a2816f50ade0bf54d5ef2",
+      "modified_for_packaging": true
+    },
+    {
+      "source_path": "components/app_radio_probe/app_radio_probe.c",
+      "destination_path": "components/app_radio_probe/app_radio_probe.c",
+      "source_sha256": "552ab944363c2804c4f4e42be1099bb54f646a6dd65b45f766269255567fb96f",
+      "packaged_sha256": "552ab944363c2804c4f4e42be1099bb54f646a6dd65b45f766269255567fb96f",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_radio_probe/host/test_probe.c",
+      "destination_path": "components/app_radio_probe/host/test_probe.c",
+      "source_sha256": "0713e9968ba4a7f023f8c28965dd77d8b1238370f01fd04a9b8eab8eb71b96d8",
+      "packaged_sha256": "0713e9968ba4a7f023f8c28965dd77d8b1238370f01fd04a9b8eab8eb71b96d8",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_radio_probe/include/app_radio_probe.h",
+      "destination_path": "components/app_radio_probe/include/app_radio_probe.h",
+      "source_sha256": "b1c8e35476eff9a3c6a5c477d09bdabeac0e6c4fc4347e991e8fc2fc487a4a5e",
+      "packaged_sha256": "b1c8e35476eff9a3c6a5c477d09bdabeac0e6c4fc4347e991e8fc2fc487a4a5e",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "tools/radio_review/README.md",
+      "destination_path": "tools/radio_review/README.md",
+      "source_sha256": "29a05972f08befccce340b7d2819e4f8a997b5ae08b058a5cbd52d9ac6feef4a",
+      "packaged_sha256": "330efce0fb29bf66c818398f1623779ced04e91b6191e2ffd88cd755fc1b18a3",
+      "modified_for_packaging": true
+    },
+    {
+      "source_path": "tools/radio_review/common.py",
+      "destination_path": "tools/radio_review/common.py",
+      "source_sha256": "9f64af37eef8b6e5f4a4bc40fed5b47f34894b6c5032b33b13562397d828f27a",
+      "packaged_sha256": "9f64af37eef8b6e5f4a4bc40fed5b47f34894b6c5032b33b13562397d828f27a",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "tools/radio_review/csi.py",
+      "destination_path": "tools/radio_review/csi.py",
+      "source_sha256": "901970a748e30c3b513f97efaa6714df8ab3ce365765526228dde83134297ac4",
+      "packaged_sha256": "901970a748e30c3b513f97efaa6714df8ab3ce365765526228dde83134297ac4",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "tools/radio_review/hotspot.py",
+      "destination_path": "tools/radio_review/hotspot.py",
+      "source_sha256": "8315c060631c8cf50f3bf6149e203a58dcee64288e3ac4e62c48eb11c737bcdb",
+      "packaged_sha256": "8315c060631c8cf50f3bf6149e203a58dcee64288e3ac4e62c48eb11c737bcdb",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "tools/radio_review/report.html",
+      "destination_path": "tools/radio_review/report.html",
+      "source_sha256": "58f9022b9adc423ecfeb6b20a7b22d1a18b72d67cab5b08f136be25a4107cad7",
+      "packaged_sha256": "58f9022b9adc423ecfeb6b20a7b22d1a18b72d67cab5b08f136be25a4107cad7",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "tools/radio_review/review.py",
+      "destination_path": "tools/radio_review/review.py",
+      "source_sha256": "26f010334b8efb8ad674eac926e3ffe7d00034dce50690d65f14e02b1d99b089",
+      "packaged_sha256": "26f010334b8efb8ad674eac926e3ffe7d00034dce50690d65f14e02b1d99b089",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "tools/radio_review/tests/export_fixture.c",
+      "destination_path": "tools/radio_review/tests/export_fixture.c",
+      "source_sha256": "4334108211b7d40bda21770f7f45c98857d45f221eb7f18f77d92a4b721549ed",
+      "packaged_sha256": "4334108211b7d40bda21770f7f45c98857d45f221eb7f18f77d92a4b721549ed",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "tools/radio_review/tests/test_review.py",
+      "destination_path": "tools/radio_review/tests/test_review.py",
+      "source_sha256": "13d9a605e327a1f0af705f2f5e73921f7870fd2b5c41bfb6766ce08e0f5aef83",
+      "packaged_sha256": "13d9a605e327a1f0af705f2f5e73921f7870fd2b5c41bfb6766ce08e0f5aef83",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "components/app_network/include/app_network_link.h",
+      "destination_path": "components/app_radio_contract/include/app_network_link.h",
+      "source_sha256": "ef7778115ed51ce617ca287bab20a46d87c031d22f2c335d0cf1dfadbad6c01f",
+      "packaged_sha256": "ef7778115ed51ce617ca287bab20a46d87c031d22f2c335d0cf1dfadbad6c01f",
+      "modified_for_packaging": false
+    },
+    {
+      "source_path": "research/radio/20261122-offline-review/simulated-hotspot.json",
+      "destination_path": "fixtures/simulated-hotspot.json",
+      "source_sha256": "b5e21c6a59bb2d34e4696e307ed2148768ecedd63fa3dbfe97e68e66890a663a",
+      "packaged_sha256": "489b3962ec2204667f1cb229ac5d1e6841ce13d1645f6eece1bab7deb10788fd",
+      "modified_for_packaging": true
+    },
+    {
+      "source_path": "research/radio/20261121-r1-csi-capture/simulated-capture.jsonl",
+      "destination_path": "fixtures/simulated-capture.jsonl",
+      "source_sha256": "c2462d93f733c4ff34d1a69909d9fda603c983e3f84d299ce34bcdcc9520912c",
+      "packaged_sha256": "1f408667210b4cc45d8b518453e99fd9b503238b2366c0d8bb7633152ac90daf",
+      "modified_for_packaging": true
+    }
+  ],
+  "packaging_adaptations": [
+    "Shared observation header moved to app_radio_contract; CMake dependency updated.",
+    "Workspace-specific runners replaced with portable tools/test.py.",
+    "Documentation paths and reproduction instructions adapted for independent repository.",
+    "Text files normalized to LF; original and packaged SHA-256 values are recorded separately."
+  ],
+  "sample_provenance": "C-generated simulated fixtures; simulated=true"
+}

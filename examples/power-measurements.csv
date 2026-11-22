@@ -1,0 +1,5 @@
+run_id,status,firmware_commit,supply_point,supply_voltage_v,host_battery_charge_state,ambient_conditions,scenario,duration_s,energy_wh,mean_power_w,peak_current_a,csi_on_ms,csi_off_ms,csi_actual_usable_pps,cpu_config,pm_lock_summary,wifi_ps,ap_dtim_ms,camera_stream,brightness_percent,volume_percent,wake_to_listen_ms,reply_start_ms,motion_trials,detected_trials,false_events,audio_result,display_result,control_result,notes
+P0-baseline,planned,,,,,,baseline,,,,,,,,,,,,,,,,,,,,,,,
+P1-on-demand,planned,,,,,,on-demand-loads,,,,,,,,,,,,,,,,,,,,,,,
+P2-dfs,planned,,,,,,dynamic-cpu-frequency,,,,,,,,,,,,,,,,,,,,,,,
+P3-wifi-sleep,planned,,,,,,idle-modem-sleep,,,,,,,,,,,,,,,,,,,,,,,

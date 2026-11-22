@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>AirBoat · 无线实验回放</title>
+<style>
+:root{color-scheme:dark;--bg:#090909;--surface:#141414;--line:#2b2a27;--muted:#aaa69f;--text:#f5f1e9;--accent:#ff9a59;--mint:#b8e99d;--pink:#e8a1c8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Segoe UI","Microsoft YaHei",sans-serif}button,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:4px}main{max-width:1200px;margin:auto;padding:36px 40px 90px}header{display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-weight:650;letter-spacing:.14em;font-size:13px}.tag,.chip{border:1px solid var(--line);border-radius:30px;padding:7px 13px;font-size:12px;color:var(--muted)}.intro{padding:66px 0 38px}.eyebrow{color:var(--accent);letter-spacing:.1em;font-size:12px}h1{font-size:clamp(32px,5vw,64px);font-weight:480;line-height:1.2;letter-spacing:-.045em;margin:16px 0 20px}p{margin:0;color:var(--muted)}.intro p{max-width:670px}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 24px}.tabs button,.filter button,.secondary{min-height:44px;border:1px solid var(--line);background:transparent;border-radius:25px;padding:10px 17px}.tabs button[aria-selected=true],.filter button[aria-pressed=true]{background:var(--text);color:#161411;border-color:var(--text)}.report{animation:arrive .35s ease both}.report[hidden]{display:none}.report-head{display:flex;gap:24px;align-items:flex-start;justify-content:space-between;margin:36px 0 24px}h2{font-size:30px;font-weight:500;margin:0 0 8px}.origin{color:var(--accent);font-size:13px;margin-bottom:12px}.file-name{overflow-wrap:anywhere;max-width:800px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}.stat{background:var(--surface);padding:24px;border-radius:22px}.stat strong{font-size:31px;font-weight:450;display:block;line-height:1.3}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:10px}.panel{border:1px solid var(--line);border-radius:26px;padding:28px;margin:22px 0}.panel-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:20px}h3{font-size:19px;font-weight:500;margin:0}.filter{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.filter button{font-size:12px;min-height:40px;padding:8px 12px}.metric{background:#1e1e1c;border:1px solid var(--line);border-radius:14px;min-height:44px;max-width:100%;padding:8px 12px}.plot{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}.readout{min-height:28px;font:13px/1.7 "Segoe UI","Microsoft YaHei",sans-serif;color:var(--text);margin:12px 0}.scrub{width:100%;accent-color:var(--accent);min-height:34px}.micro{font-size:12px;color:var(--muted);line-height:1.7}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.two .panel{margin:0}.table-wrap{max-height:430px;overflow:auto;border-radius:12px;margin-top:16px}table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap}td,th{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;font-weight:400}th{color:var(--muted);position:sticky;top:0;background:var(--surface)}.notes{display:grid;gap:12px}.note{padding:16px;background:var(--surface);border-radius:16px;color:var(--muted)}.rule{display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px}.rule span:first-child{color:var(--muted)}details{margin-top:24px}summary{cursor:pointer;color:var(--muted);padding:12px 0;min-height:44px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:11px/1.65 Consolas,monospace;color:var(--muted);background:var(--surface);border-radius:18px;padding:20px}.footer{margin-top:36px;font-size:12px;color:var(--muted)}.grid-line{stroke:#2b2a27;stroke-width:1}.axis-text{fill:#aaa69f;font-size:12px}.series{fill:none;stroke:var(--accent);stroke-width:2.3;stroke-linejoin:round;stroke-linecap:round}.cursor{stroke:#eee;stroke-width:1;stroke-dasharray:4 5}.invalid{fill:var(--pink);opacity:.12}.band{fill:var(--mint);opacity:.06}svg circle{fill:var(--accent)}[hidden]{display:none!important}@keyframes arrive{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}@media(max-width:720px){main{padding:22px 18px 56px}.intro{padding:44px 0 28px}.stats{grid-template-columns:1fr 1fr}.stat{padding:20px}.panel{padding:20px 14px;border-radius:22px}.two{grid-template-columns:1fr}.report-head{display:block}.report-head .chip{display:inline-block;margin-top:16px}h2{font-size:25px}.panel-head{align-items:flex-start}.secondary{font-size:12px;padding:8px 12px}}
+</style>
+</head>
+<body><main>
+<header><div class="brand">AIRBOAT / FIELD NOTES</div><span class="tag">离线 · 本地文件</span></header>
+<section class="intro"><div class="eyebrow">RADIO REPLAY · N1 / R1</div><h1>把一段无线，读清楚。</h1><p>沿着动作标签回看信号、收样间隔和自身运动。每份记录保留来源与校验依据，方便下一轮只测试真正需要确认的问题。</p></section>
+<nav class="tabs" id="tabs" role="tablist" aria-label="采集文件"></nav><div id="reports"></div>
+<p class="footer">各文件使用各自的采集时间轴。更换设备或实验轮次时，分别查看；未来的活动判断与场景体验按真实测试结果接入。</p>
+</main>
+<script type="application/json" id="review-data">__AIRBOAT_REVIEW_DATA__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('review-data').textContent);
+const NS='http://www.w3.org/2000/svg';
+function element(tag,text,cls,parent){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;if(parent)parent.append(e);return e;}
+function svgElement(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))e.setAttribute(k,String(v));if(parent)parent.append(e);return e;}
+function number(n,d=1){return n===null||n===undefined?'—':Number(n).toLocaleString('zh-CN',{maximumFractionDigits:d});}
+function rule(parent,label,value){const row=element('div',undefined,'rule',parent);element('span',label,undefined,row);element('span',String(value),undefined,row);}
+function table(parent,headers,rows){const wrap=element('div',undefined,'table-wrap',parent),t=element('table',undefined,undefined,wrap),head=element('tr',undefined,undefined,element('thead',undefined,undefined,t));headers.forEach(x=>element('th',x,undefined,head));const body=element('tbody',undefined,undefined,t);for(const row of rows){const tr=element('tr',undefined,undefined,body);row.forEach(x=>element('td',String(x),undefined,tr));}return wrap;}
+function panel(parent,title){const p=element('section',undefined,'panel',parent);element('h3',title,undefined,p);return p;}
+function createPlot(parent,report){
+ const section=element('section',undefined,'panel',parent),heading=element('div',undefined,'panel-head',section);
+ element('h3','沿时间查看',undefined,heading);
+ const metric=element('select',undefined,'metric',heading);metric.setAttribute('aria-label','图表指标');
+ for(const [value,text]of [['value','接收信号 · dBm'],...(report.kind==='csi'?[['gap_ms','收样间隔 · ms']]:[])]){const option=element('option',text,undefined,metric);option.value=value;}
+ const filters=element('div',undefined,'filter',section);filters.setAttribute('aria-label','动作标签筛选');
+ const svg=svgElement('svg',{viewBox:'0 0 1120 285',class:'plot',role:'img','aria-label':'信号时间曲线'},section);
+ const readout=element('p','拖动下方滑块，查看单个采样点。','readout',section);
+ const slider=element('input',undefined,'scrub',section);slider.type='range';slider.min='0';slider.max=String(Math.max(0,report.points.length-1));slider.value='0';slider.setAttribute('aria-label','查看采样点');slider.disabled=!report.points.length;
+ element('p',report.kind==='csi'?`曲线每 ${report.summary.stride} 帧取一点，保留末帧；分段和计数使用全部原始帧。浅绿为姿态合格，粉色为自身运动或姿态未知。`:'失效读数和来源变化处分开绘制。浅绿为有效读数，粉色为无效读数；距离采用现场人工标记。','micro',section);
+ let selected=null,cursorIndex=0,coords,plotWidth=1120;
+ const filterButtons=[];
+ const labels=[...new Set(report.intervals.map(x=>x.label))];
+ for(const key of [null,...labels]){const button=element('button',key===null?'全部':report.labels[key],undefined,filters);button.type='button';button.setAttribute('aria-pressed',String(key===null));button.addEventListener('click',()=>{selected=key;filterButtons.forEach(b=>b.button.setAttribute('aria-pressed',String(b.key===key)));draw();});filterButtons.push({key,button});}
+ function showCursor(index){
+  cursorIndex=index;slider.value=String(index);const p=report.points[index];if(!p)return;
+  const old=svg.querySelector('.cursor');if(old)old.remove();
+  svgElement('line',{x1:coords.x(p.t),x2:coords.x(p.t),y1:15,y2:242,class:'cursor'},svg);
+  const extras=report.kind==='hotspot'?` · 趋势 ${['未知','稳定','变弱','变强'][p.recorded_trend]}${p.distance_mm?' · 人工距离 '+p.distance_mm/1000+' 米':''}${p.paired?'':' · 标记端离线'}`:` · ${p.eligible?'姿态合格':'自身运动／姿态未知'} · 间隔 ${number(p.gap_ms)} ms`;
+  readout.textContent=`${number(p.t,3)} s · ${p.value===null?'无效读数':p.value+' dBm'} · ${report.labels[p.label]}${extras}`;
+ }
+ function draw(){
+  svg.replaceChildren();plotWidth=Math.max(300,svg.clientWidth||1120);svg.setAttribute('viewBox',`0 0 ${plotWidth} 285`);svg.setAttribute('aria-label',metric.value==='gap_ms'?'收样间隔时间曲线':'接收信号时间曲线');const pts=report.points,values=pts.map(p=>p[metric.value]).filter(v=>v!==null&&v!==undefined);
+  let low=values.length?Math.min(...values):0,high=values.length?Math.max(...values):1;
+  const pad=Math.max((high-low)*.12,metric.value==='gap_ms'?5:2);low-=pad;high+=pad;
+  const duration=report.summary.duration_s||1,x=t=>52+Math.max(0,Math.min(1,t/duration))*(plotWidth-72),y=v=>242-(v-low)/(high-low)*220;
+  coords={x,y};
+  for(let i=0;i<5;i++){const v=low+(high-low)*i/4,yy=y(v);svgElement('line',{x1:52,x2:plotWidth-20,y1:yy,y2:yy,class:'grid-line'},svg);const tx=svgElement('text',{x:43,y:yy+4,'text-anchor':'end',class:'axis-text'},svg);tx.textContent=number(v);}
+  for(let i=0;i<=4;i++){const t=duration*i/4,tx=svgElement('text',{x:x(t),y:270,'text-anchor':'middle',class:'axis-text'},svg);tx.textContent=number(t)+' s';}
+  for(const interval of report.intervals){if(selected!==null&&interval.label!==selected)continue;const w=x(interval.end_s)-x(interval.start_s);if(w>0)svgElement('rect',{x:x(interval.start_s),y:15,width:w,height:227,class:interval.eligible?'band':'invalid'},svg);}
+  let path='',last=null;const flush=()=>{if(path){svgElement('path',{d:path,class:'series'},svg);path='';}};
+  for(const p of pts){const value=p[metric.value];if(value===null||value===undefined||(selected!==null&&p.label!==selected)){flush();last=null;continue;}if(!last||p.segment!==last.segment){flush();path=`M${x(p.t)},${y(value)}`;svgElement('circle',{cx:x(p.t),cy:y(value),r:2.2},svg);}else path+=` L${x(p.t)},${y(value)}`;last=p;}flush();
+  showCursor(Math.min(cursorIndex,Math.max(0,pts.length-1)));
+ }
+ slider.addEventListener('input',()=>showCursor(Number(slider.value)));metric.addEventListener('change',draw);
+ svg.addEventListener('pointermove',event=>{if(!report.points.length)return;const rect=svg.getBoundingClientRect(),t=Math.max(0,Math.min(1,((event.clientX-rect.left)/rect.width*plotWidth-52)/(plotWidth-72)))*(report.summary.duration_s||1);let lo=0,hi=report.points.length-1;while(lo<hi){const mid=Math.floor((lo+hi)/2);if(report.points[mid].t<t)lo=mid+1;else hi=mid;}if(lo&&Math.abs(report.points[lo-1].t-t)<Math.abs(report.points[lo].t-t))lo--;showCursor(lo);});
+ new ResizeObserver(()=>{if(svg.clientWidth)draw();}).observe(svg);
+ draw();
+}
+function createReport(r,index){
+ const root=element('article',undefined,'report',document.getElementById('reports'));root.id='report-'+index;root.setAttribute('role','tabpanel');root.setAttribute('aria-labelledby','tab-'+index);root.hidden=index!==0;
+ const head=element('div',undefined,'report-head',root),left=element('div',undefined,undefined,head);
+ element('div',r.simulated?'模拟样例 · SIMULATED':'设备采集 · DEVICE CAPTURE','origin',left);element('h2',r.title,undefined,left);element('p',r.source.name,'file-name',left);element('span','文件校验通过','chip',head);
+ const stats=element('div',undefined,'stats',root),s=r.summary;
+ for(const [value,label]of [[number(s.records,0),'原始记录'],[number(s.duration_s)+' s','记录时长'],[number(s.valid,0),r.kind==='csi'?'姿态合格帧':'有效热点读数'],[r.kind==='csi'?number(r.quality.counters.full_drops+r.quality.counters.contended_drops,0):number(s.missed_reads,0),r.kind==='csi'?'入口丢样次数':'记录器漏读计数']]){const box=element('div',undefined,'stat',stats);element('strong',value,undefined,box);element('span',label,undefined,box);}
+ createPlot(root,r);
+ const two=element('div',undefined,'two',root),quality=panel(two,'先看数据质量'),meaning=panel(two,'这轮能看什么');
+ if(r.kind==='hotspot'){rule(quality,'有效读数',`${s.valid} / ${s.records}`);rule(quality,'信号中位数',number(s.median_dbm)+' dBm');rule(quality,'保留区间平均读率',number(s.mean_pps,2)+' 次/秒');rule(quality,'来源变化 / 读数断点',s.source_changes+' / '+s.discontinuities);rule(quality,'覆盖 / 标记端离线',s.overwritten+' / '+s.unpaired);rule(quality,'趋势回放',r.replay.profile||'该参数配置待适配');}
+ else{rule(quality,'来源／格式／运动轮次组',r.quality.groups.length);rule(quality,'保留字节',Object.keys(r.quality.payload_lengths).join(' / ')+' B');rule(quality,'首次无效字标志',s.first_word_invalid+' 帧');rule(quality,'已导出 / 已接受',s.records+' / '+r.quality.counters.accepted);rule(quality,'仍在队列 / 丢弃',r.quality.counters.queued+' / '+r.quality.counters.discarded);rule(quality,'载波布局','待真实格式核对');}
+ element('p',r.interpretation,'micro',meaning);const notes=element('div',undefined,'notes',meaning);for(const text of r.warnings)element('div',text,'note',notes);if(r.simulated)element('div','本文件由电脑生成，用于检查数据处理和报告交互。','note',notes);
+ const segments=panel(root,'按动作标签回看');element('p','时间以本文件第一条记录为起点。持续时间取可观察区间，末帧不额外补时。','micro',segments);
+ const rows=r.intervals.slice(0,120).map(v=>[number(v.start_s,2)+'–'+number(v.end_s,2)+' s',v.label_name||r.labels[v.label],v.count,v.eligible?(r.kind==='csi'?'姿态合格':'有效'):(r.kind==='csi'?'自身运动／姿态未知':'无效读数'),r.kind==='hotspot'?(v.expected_trend?(v.first_matching_trend_s===null?'尚未出现':number(v.first_matching_trend_s,2)+' s'):'—'):number(v.duration_s,2)+' s']);
+ table(segments,['区间','人工标签','条数','状态',r.kind==='hotspot'?'首次出现对应趋势':'可观察时长'],rows);if(r.intervals.length>120)element('p',`页面展示前 120 段，共 ${r.intervals.length} 段；全部分段保留在 review.json。`,'micro',segments);
+ if(r.kind==='csi'){const groups=panel(root,'来源与格式分组');table(groups,['网络轮次','信道 / 格式','帧数','平均包率','最大间隔','硬件时钟回绕'],r.quality.groups.map(g=>[g.network_generation,g.channel+' / '+g.rx_format,g.frames,number(g.mean_pps,2)+' /s',number(g.max_gap_ms)+' ms',g.hardware_wraps]));}
+ const detail=element('details',undefined,undefined,root);element('summary','查看来源与可复核参数',undefined,detail);element('pre',JSON.stringify({identity:r.identity,source:r.source,...(r.kind==='hotspot'?{replay:r.replay}:{quality:r.quality})},null,2),undefined,detail);
+ return root;
+}
+const roots=DATA.reports.map(createReport),buttons=[];
+DATA.reports.forEach((r,index)=>{const b=element('button',(r.kind==='hotspot'?'N1 热点':'R1 CSI')+' · '+(index+1),undefined,document.getElementById('tabs'));b.id='tab-'+index;b.setAttribute('role','tab');b.setAttribute('aria-controls','report-'+index);b.setAttribute('aria-selected',String(index===0));b.tabIndex=index===0?0:-1;b.addEventListener('click',()=>activate(index));b.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%buttons.length;if(event.key==='ArrowLeft')next=(index+buttons.length-1)%buttons.length;if(event.key==='Home')next=0;if(event.key==='End')next=buttons.length-1;if(next!==undefined){event.preventDefault();activate(next);buttons[next].focus();}});buttons.push(b);});
+function activate(index){roots.forEach((root,i)=>{root.hidden=i!==index;buttons[i].setAttribute('aria-selected',String(i===index));buttons[i].tabIndex=i===index?0:-1;});}
+window.airboatReview={reportCount:DATA.reports.length};
+</script></body></html>
